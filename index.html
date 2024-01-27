@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tadajb Game</title>
+  
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    
+    main {
+      max-width: 800px;
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tadajb Game</title>
+  
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #game-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .tile {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    
+    .tile:hover {
+      background-color: #aaa;
+    }
+    
+    .tile.active {
+      background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tadajb Game</h1>
+  </header>
+  <p>Welcome to Tadajb Game, developed by Tada Musa JB!
+
+In this simple yet addictive game, your goal is to click on the tiles and watch them change color. Each time you click on a tile, its background color will transform into a random hue, creating a vibrant and dynamic game board.
+
+The game board consists of 9 tiles arranged in a grid. To play, simply click on any tile to see it come alive with a new color. Keep clicking to create a mesmerizing display of ever-changing hues.
+
+Tadajb Game is a perfect way to relax, unwind, and let your creativity flow. Whether you are looking for a quick distraction or a calming activity, this game offers an enjoyable experience for players of all ages.
+
+So go ahead, click away and immerse yourself in the colorful world of Tadajb Game!
+
+Developer: Tada Musa JB </p>
+  <main>
+    <h2>Click on the tiles to win!</h2>
+    
+    <div id="game-board"></div>
+  </main>
+  
+  <script>// Generate random color
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Create game board
+function createGameBoard() {
+  var gameBoard = document.getElementById("game-board");
+  
+  for (var i = 0; i < 9; i++) {
+    var tile = document.createElement("div");
+    tile.className = "tile";
+    tile.addEventListener("click", function() {
+      this.style.backgroundColor = getRandomColor();
+    });
+    gameBoard.appendChild(tile);
+  }
+}
+
+// Call the function to create the game board when the page loads
+window.onload = createGameBoard;</script>
+</body>
+</html>￼Enter      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    #game-board {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .tile {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    
+    .tile:hover {
+      background-color: #aaa;
+    }
+    
+    .tile.active {
+background-color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tadajb Game</h1>
+  </header>
+  <p>Welcome to Tadajb Game, developed by Tada Musa JB!
+
+In this simple yet addictive game, your goal is to click on the tiles and watch them change color. Each time you click on a tile, its background color will transform into a random hue, creating a vibrant and dynamic game board.
+
+The game board consists of 9 tiles arranged in a grid. To play, simply click on any tile to see it come alive with a new color. Keep clicking to create a mesmerizing display of ever-changing hues.
+
+Tadajb Game is a perfect way to relax, unwind, and let your creativity flow. Whether you are looking for a quick distraction or a calming activity, this game offers an enjoyable experience for players of all ages.
+
+So go ahead, click away and immerse yourself in the colorful world of Tadajb Game!
+
+Developer: Tada Musa JB </p>
+  <main>
+    <h2>Click on the tiles to win!</h2>
+    
+    <div id="game-board"></div>
+  </main>
+  
+  <script>// Generate random color
